@@ -1,9 +1,13 @@
 from words import word_list
 from art import logo, stages
-from os import system
+from os import system, name
 from random import choice
 
-system("cls")
+if name == 'nt': 
+    system("cls")
+else:
+    system("clear")
+
 print(logo)
 
 random_word = choice(word_list)
